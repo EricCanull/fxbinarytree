@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa39dde5-8982-452b-95c3-23d6201b91a8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BinarySearchTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BinaryTreeBasis.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Circle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GraphicsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/GraphicsTree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Line.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/QueueException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/TreeException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/TreeIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/TreeNode.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/main/java/tree/BinarySearchTree.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/BinaryTreeBasis.java" afterPath="$PROJECT_DIR$/src/main/java/tree/BinaryTreeBasis.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Circle.java" afterPath="$PROJECT_DIR$/src/main/java/shape/Circle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/GraphicsController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/GraphicsController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/GraphicsTree.java" afterPath="$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Line.java" afterPath="$PROJECT_DIR$/src/main/java/shape/Line.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/QueueException.java" afterPath="$PROJECT_DIR$/src/main/java/tree/QueueException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/TreeException.java" afterPath="$PROJECT_DIR$/src/main/java/tree/TreeException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/TreeIterator.java" afterPath="$PROJECT_DIR$/src/main/java/tree/TreeIterator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/TreeNode.java" afterPath="$PROJECT_DIR$/src/main/java/tree/TreeNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGraphicsPanel.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGraphicsPanel.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLGraphicsPanel.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/FXMLGraphicsPanel.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java" afterPath="$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/shape/Circle.java" afterPath="$PROJECT_DIR$/src/main/java/shape/Circle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,114 +17,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinarySearchTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1860">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeIterator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/TreeIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/GraphicsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-833">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryTreeBasis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/BinaryTreeBasis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+            <state relative-caret-position="61">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Line.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shape/Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Circle.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Circle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/shape/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+            <state relative-caret-position="320">
+              <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueueException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/QueueException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tree/TreeNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicsTree.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="352" column="51" lean-forward="false" selection-start-line="352" selection-start-column="47" selection-end-line="352" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#10895#10896#0" expanded="true" />
-                <element signature="e#10975#10976#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -178,9 +63,9 @@
         <option value="$PROJECT_DIR$/src/main/java/tree/QueueException.java" />
         <option value="$PROJECT_DIR$/src/main/java/tree/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/shape/Circle.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/GraphicsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shape/Circle.java" />
       </list>
     </option>
   </component>
@@ -286,6 +171,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,6 +225,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxbinarytree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxbinarytree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,12 +712,12 @@
       <updated>1499366758985</updated>
       <workItem from="1499366762910" duration="2918000" />
       <workItem from="1499373557001" duration="5489000" />
-      <workItem from="1499398499938" duration="4603000" />
+      <workItem from="1499398499938" duration="6308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13010000" />
+    <option name="totallyTimeSpent" value="14715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="82" y="0" width="1838" height="1080" extended-state="6" />
@@ -817,7 +732,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15539113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15539113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -867,7 +782,7 @@
         <state relative-caret-position="60">
           <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,9 +802,9 @@
         <state relative-caret-position="740">
           <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10895#10896#0" expanded="true" />
-            <element signature="e#10975#10976#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#10754#10755#0" expanded="false" />
+            <element signature="e#10834#10835#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,7 +853,7 @@
         <state relative-caret-position="60">
           <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,9 +904,9 @@
         <state relative-caret-position="4740">
           <caret line="248" column="79" lean-forward="false" selection-start-line="248" selection-start-column="79" selection-end-line="248" selection-end-column="79" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10895#10896#0" expanded="true" />
-            <element signature="e#10975#10976#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#10754#10755#0" expanded="false" />
+            <element signature="e#10834#10835#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1038,7 +953,7 @@
         <state relative-caret-position="-1860">
           <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1047,14 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shape/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1093,12 +1000,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="401">
+          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#10754#10755#0" expanded="false" />
+            <element signature="e#10834#10835#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1113,15 +1022,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/GraphicsTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="352" column="51" lean-forward="false" selection-start-line="352" selection-start-column="47" selection-end-line="352" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#10895#10896#0" expanded="true" />
-            <element signature="e#10975#10976#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="61">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shape/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

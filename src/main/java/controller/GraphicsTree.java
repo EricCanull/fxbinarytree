@@ -241,10 +241,6 @@ public final class GraphicsTree extends Canvas {
 		GraphicsContext gc = getGraphicsContext2D();
 		gc.clearRect(0, 0, width, height);
 
-		//Graphics2D g2D = (Graphics2D) graphics;
-
-		//g2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-	
 		// If the tree is not empty; draw the lines and circles
 		if (tree.root != null) {
 		int treeHeight = tree.getHeight(tree.root);

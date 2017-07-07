@@ -20,8 +20,9 @@ public final class Circle {
 	/**
 	 * The font for the numbers inside the circle.
 	 */
-	final Font font =  Font.font("Cooper Black", FontWeight.LIGHT, 16);
+	final Font font =  Font.font("Cooper Black", FontWeight.BOLD, 16);
 	final FontMetrics fm = Toolkit.getToolkit().getFontLoader().getFontMetrics(font);
+
 	/**
 	 * The radius of the circle.
 	 */
@@ -79,9 +80,9 @@ public final class Circle {
 		gc.strokeOval(point.getX() - RADIUS, point.getY() - RADIUS, 2 * RADIUS, 2 * RADIUS);
 
 		// Draw the id number inside the circle
-		gc.setStroke(getFontColor());
 		gc.setFont(font);
-		gc.strokeText(getKey(),
+		gc.setFill(getFontColor());
+		gc.fillText(getKey(),
 				 point.getX() - (fm.computeStringWidth(getKey()) / 2),
 				 point.getY() + (fm.getAscent() / 4));
 	}
