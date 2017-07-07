@@ -1,3 +1,5 @@
+package controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,9 +35,14 @@ public final class GraphicsController implements Initializable {
 
 		// The center panel for drawing the tree
 		graphicsTree = new GraphicsTree();
-
-		// Add the panels onto the frame
+		// Add the panels onto the border pane
 		root_container.setCenter(graphicsTree);
+
+		// Bind canvas size to stack pane size.
+		graphicsTree.widthProperty().bind(
+				root_container.widthProperty());
+		graphicsTree.heightProperty().bind(
+				root_container.heightProperty().subtract(50));
 	}
 	
 	/**
@@ -45,7 +52,9 @@ public final class GraphicsController implements Initializable {
 		try {
 			graphicsTree.search(Integer.parseInt(input_field.getText().trim()));
 		} catch (NumberFormatException nfe) {
-			Alert alert = new Alert(Alert.AlertType.ERROR, "Error searching for value. The input field can only accept numbers.", ButtonType.OK);
+			Alert alert = new Alert(Alert.AlertType.ERROR,
+					"Error searching for value. The input field can only accept numbers.", 	ButtonType.OK);
+
 			alert.showAndWait()
 					.filter(response -> response == ButtonType.OK)
 					.ifPresent(response -> alert.close());

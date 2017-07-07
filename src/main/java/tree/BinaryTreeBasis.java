@@ -1,3 +1,7 @@
+package tree;
+
+import shape.Circle;
+
 /**
  * An abstract base class for a binary tree.
  * @author Eric Canull
@@ -7,7 +11,7 @@ public abstract class BinaryTreeBasis {
 	/**
 	 * Inherited by the concrete BST class.
 	 */
-	protected TreeNode root;
+	public TreeNode root;
 	
 	/**
 	 * An abstract base class for the BST.
@@ -42,12 +46,12 @@ public abstract class BinaryTreeBasis {
 
 	/**
 	 * Gets the root item.
-	 * @return A Circle object representing the tree root
+	 * @return A shape.Circle object representing the tree root
 	 * @throws TreeException
 	 */
 	public TreeNode getRoot() throws TreeException {
 		if (root == null) {
-			throw new TreeException("TreeException: Empty Tree");
+			throw new TreeException("tree.TreeException: Empty Tree");
 		}
 		
 		return root;
@@ -55,7 +59,7 @@ public abstract class BinaryTreeBasis {
 	
 	/**
 	 * Sets the root item. 
-	 * @param newCircle a Circle object with a tree search key
+	 * @param newCircle a shape.Circle object with a tree search key
 	 */
 	public abstract void setRootItem(Circle newCircle);
 

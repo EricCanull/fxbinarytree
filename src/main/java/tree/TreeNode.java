@@ -1,3 +1,7 @@
+package tree;
+
+import shape.Circle;
+
 /**
  * A binary tree using circle objects.
  * @author Eric Canull
@@ -5,10 +9,10 @@
  */
 public class TreeNode {
 	
-	Circle rootCircle;	
-	TreeNode leftCircle;
-	TreeNode rightCircle;
-	boolean highlightFlag;
+	public Circle rootCircle;
+	public TreeNode leftCircle;
+	public TreeNode rightCircle;
+	public boolean highlightFlag;
 	
 	/**
 	 * A binary tree using circle objects.

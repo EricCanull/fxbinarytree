@@ -1,9 +1,12 @@
+package tree;
+
 import java.util.Objects;
+import shape.Circle;
 
 /**
  * Binary search tree. 
  * Inherits isEmpty(), makeEmpty(), getRootItem(), and the
- * use of the constructors from BinaryTreeBasis Assumption: A tree contains at
+ * use of the constructors from tree.BinaryTreeBasis Assumption: A tree contains at
  * most one item with a given search key at any time.
  * 
  * @author Eric Canull
@@ -117,14 +120,14 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	 * Deletes a circle from the tree.
 	 * @param tNode a tree node 
 	 * @param searchKey a unique identifying value
-	 * @return A TreeNode from within the tree
+	 * @return A tree.TreeNode from within the tree
 	 * @Overload deleteItem()
 	 */
 	protected TreeNode deleteItem(TreeNode tNode, Integer searchKey) {
 		TreeNode newSubtree;
 		
 		if (tNode == null) {
-			throw new TreeException("TreeException: Item not found");
+			throw new TreeException("tree.TreeException: Item not found");
 		}
 		
 		Circle nodeItem = tNode.rootCircle;
@@ -146,8 +149,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Helper method finds and replaces a deleted node. 
-	 * @param tNode A TreeNode from within the tree
-	 * @return A TreeNode from within the tree
+	 * @param tNode A tree.TreeNode from within the tree
+	 * @return A tree.TreeNode from within the tree
 	 */
 	protected TreeNode deleteNode(TreeNode tNode) {
 

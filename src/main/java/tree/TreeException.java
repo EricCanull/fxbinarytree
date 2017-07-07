@@ -1,14 +1,16 @@
+package tree;
+
 /**
- * Defines an exception that is thrown when a queue exception occurs.
+ * Defines an exception that is thrown when tree exception occurs.
  */
 @SuppressWarnings("serial")
-public final class QueueException extends RuntimeException {
-
+public final class TreeException extends RuntimeException {
+	
 	/**
 	 * Constructs an object with specific message
 	 * @param message A string literal specifying the details of this exception
 	 */
-	public QueueException(String message) {
+	public TreeException(String message) {
 		super(message);
 	}
 }

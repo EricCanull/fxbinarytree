@@ -1,3 +1,5 @@
+package shape;
+
 import com.sun.javafx.tk.FontMetrics;
 import com.sun.javafx.tk.Toolkit;
 import javafx.geometry.Point2D;
@@ -18,7 +20,7 @@ public final class Circle {
 	/**
 	 * The font for the numbers inside the circle.
 	 */
-	final Font font =  Font.font("Cooper Black", FontWeight.NORMAL, 18);
+	final Font font =  Font.font("Cooper Black", FontWeight.LIGHT, 16);
 	final FontMetrics fm = Toolkit.getToolkit().getFontLoader().getFontMetrics(font);
 	/**
 	 * The radius of the circle.
@@ -43,9 +45,7 @@ public final class Circle {
 	 */
 	public Circle(Integer searchKey) {
 		this.searchKey = searchKey;
-		this.backgroundColor = Color.rgb(49, 116, 222);
-		this.setBorderColor(Color.rgb(99, 99, 99));
-		this.fontColor = Color.WHITE;
+		this.backgroundColor = Color.web("#FCFCFC");
 	}
 	
 	/**
@@ -58,7 +58,7 @@ public final class Circle {
 		this.point = point;
 		this.backgroundColor = Color.rgb(49, 116, 222);
 		this.setBorderColor(Color.rgb(99, 99, 99));
-		this.fontColor = Color.WHITE;
+		this.fontColor = Color.web("#FCFCFC");
 		
 	}
 
@@ -81,7 +81,9 @@ public final class Circle {
 		// Draw the id number inside the circle
 		gc.setStroke(getFontColor());
 		gc.setFont(font);
-		gc.strokeText(getKey(),(int) point.getX() - (fm.computeStringWidth(getKey()) / 2), (int) point.getY());
+		gc.strokeText(getKey(),
+				 point.getX() - (fm.computeStringWidth(getKey()) / 2),
+				 point.getY() + (fm.getAscent() / 4));
 	}
 
 	private String getKey() {
@@ -179,7 +181,7 @@ public final class Circle {
 			setBorderColor(Color.rgb(49, 116, 222));
 	
 		} else {
-			setFontColor(Color.WHITE);
+			setFontColor(Color.web("#FCFCFC"));
 			setBackgroundColor(Color.rgb(49, 116, 222));
 			setBorderColor(Color.rgb(99, 99, 99));
 		}

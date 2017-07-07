@@ -1,10 +1,14 @@
+package controller;
+
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.layout.BorderPane;
 
-
+import tree.*;
+import shape.*;
 import java.util.Objects;
 
 /**
@@ -17,12 +21,6 @@ import java.util.Objects;
 public final class GraphicsTree extends Canvas {
 
 	/**
-	 * The dimensions for the panel.
-	 */
-	private static double WIDTH = 900;
-	private static double HEIGHT = 400;
-
-	/**
 	 * The initial input values for the tree.
 	 */
 	private static final Integer[] NUMBERS_ARRAY = { 50, 25, 30, 12, 10, 75, 70, 80, 110 };
@@ -31,25 +29,23 @@ public final class GraphicsTree extends Canvas {
 	private TreeIterator treeIterator;  // The BST Iterator
 	private Circle insertCircle;        // Insert circle 
 	private int maxTreeHeight; 			// Max tree height;
-	
 
 	/**
 	 * Draws the tree and updates the graphics to display according to the
 	 * searching, inserting, deleting, and traversal options.
 	 */
 	public GraphicsTree() {
-		this.widthProperty().setValue(WIDTH);
-		this.heightProperty().setValue(HEIGHT);
+
+		widthProperty().addListener(evt -> drawTree());
+		heightProperty().addListener(evt -> drawTree());
+
 		createTree();
 	}
 	
 	/**
      * Changes the tree rendered by this panel.
      */
-    public void setTree(BinarySearchTree root) {
-        tree = root;
-        this.getGraphicsContext2D().stroke();
-    }
+    public void setTree(BinarySearchTree root) {  tree = root; }
 
 	/**
 	 * Creates the initial binary search tree with the default values
@@ -64,6 +60,7 @@ public final class GraphicsTree extends Canvas {
 			Circle circle = new Circle(number);
 			tree.insertItem(circle);
 		}
+
 		drawTree();
 	}
 
@@ -82,13 +79,13 @@ public final class GraphicsTree extends Canvas {
 	 * be repainted to show the path. If the number cannot be found a notification
 	 * message will be displayed.
 	 * 
-	 * @param searchKey a <code>Integer</code> number for finding a TreeNode
+	 * @param searchKey a <code>Integer</code> number for finding a tree.TreeNode
 	 */
 	public void search(Integer searchKey) {
 
 		// Try to search for a number.
 		try { 
-			searchKey = tree.retrieveItem(searchKey); // number was found
+			tree.retrieveItem(searchKey); // number was found
 		} catch (NullPointerException e) { // Not found
 			//JOptionPane.showMessageDialog(null, searchKey + " was not found.");
 			tree.setResetColor(tree.root); // Reset color
@@ -146,7 +143,6 @@ public final class GraphicsTree extends Canvas {
 	 */
 	public void insert(Integer searchKey) {
 		insertCircle = new Circle(searchKey);
-        this.getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
 		tree.insertItem(insertCircle);
 		int heightOption = 2;
 		drawTree();
@@ -176,9 +172,8 @@ public final class GraphicsTree extends Canvas {
 					// Confirm height input is within acceptable range
 					if (newHeight > tree.getHeight(tree.getRoot()) && newHeight <= 10) {
 						setMaxTreeHeight(newHeight);
-						this.getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
 					} else {
-						throw new TreeException("TreeException on change height.");
+						throw new TreeException("tree.TreeException on change height.");
 					}
 
 					// Error occurred: Reverse changes and exit
@@ -224,7 +219,6 @@ public final class GraphicsTree extends Canvas {
 			//JOptionPane.showMessageDialog(null, "Unable to delete " + searchKey);
 		}
 
-        this.getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
 		drawTree();
 	}
 
@@ -234,17 +228,18 @@ public final class GraphicsTree extends Canvas {
 	public void makeEmpty() {
 		tree.makeEmpty();
 		maxTreeHeight = 6;
-        this.getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
-
+        getGraphicsContext2D().clearRect(0, 0, getWidth(), getHeight());
 	}
 
 	/**
 	 * Draws the binary tree on the component.
 	 */
 	protected void drawTree() {
-		//super.paintComponent(graphics);
+		double width = getWidth();
+		double height = getHeight();
 
-		GraphicsContext gc = this.getGraphicsContext2D();
+		GraphicsContext gc = getGraphicsContext2D();
+		gc.clearRect(0, 0, width, height);
 
 		//Graphics2D g2D = (Graphics2D) graphics;
 
@@ -352,6 +347,10 @@ public final class GraphicsTree extends Canvas {
 		if (treeNode.rightCircle != null) {
 			drawCircles(gc, treeNode.rightCircle, (xMin + xMax) / 2, xMax, yMin + yMax, yMax);
 		}
+	}
+
+	public void clearCanvas() {
+		getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
 	}
 }
 	
