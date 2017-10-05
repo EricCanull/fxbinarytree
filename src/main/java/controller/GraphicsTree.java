@@ -5,7 +5,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.layout.BorderPane;
 
 import tree.*;
 import shape.*;
@@ -102,14 +101,14 @@ public final class GraphicsTree extends Canvas {
 	public String printTree() {
 
 		// Traversal text output string
-		String outputString = "";
+		StringBuilder outputString = new StringBuilder();
 
 		// Add the next tree iterator to the output
 		while (treeIterator.hasNext()) {
-			outputString += treeIterator.next() + " ";
+			outputString.append(treeIterator.next()).append(" ");
 		}
 
-		return outputString; // return the output string
+		return outputString.toString(); // return the output string
 	}
 
 	/**

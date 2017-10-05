@@ -13,15 +13,14 @@ import shape.Circle;
  * @version 1.0
  */
 public final class BinarySearchTree extends BinaryTreeBasis {
-	
-	
+
 	/**
-	 * Binary search tree. 
+	 * Binary search tree.
 	 */
 	public BinarySearchTree() {
 		this.root = null;
 	}
-	
+
 	/**
 	 * Binary search tree.
 	 * @param rootCircle
@@ -41,8 +40,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Inserts a new circle into the tree.
-	 * @param tNode
-	 * @param newItem
+	 * @param tNode a tree node
+	 * @param newCircle a new circle
 	 * @return 
 	 * @Overload insertItem() 
 	 */
@@ -55,6 +54,10 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 		}
 		
 		Circle nodeItem = tNode.rootCircle;
+
+		if(Objects.equals(newCircle.getSearchKey(), nodeItem.getSearchKey())) {
+		    return tNode;
+        }
 
 		if (newCircle.getSearchKey() < nodeItem.getSearchKey()) {
 			newSubtree = insertItem(tNode.leftCircle, newCircle);
@@ -202,7 +205,7 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Resets the color to the default.
-	 * @param TreeNode A node in the tree
+	 * @param tNode
 	 */
 	public void setResetColor(TreeNode tNode) {
 		 resetColor(tNode);
