@@ -88,7 +88,7 @@ public final class Line {
 	 * @param highlight a boolean value for switching on/off highlighted colors
 	 */
 	public void setHighlighter(boolean highlight) {
-		if (highlight == true) {
+		if (highlight) {
 			this.color = HIGHLIGHT_COLOR;
 		} else {
 			this.color = UI_DEFAULT_COLOR;

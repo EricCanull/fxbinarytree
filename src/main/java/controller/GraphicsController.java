@@ -4,8 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 import java.net.URL;
@@ -39,10 +37,8 @@ public final class GraphicsController implements Initializable {
 		root_container.setCenter(graphicsTree);
 
 		// Bind canvas size to stack pane size.
-		graphicsTree.widthProperty().bind(
-				root_container.widthProperty());
-		graphicsTree.heightProperty().bind(
-				root_container.heightProperty().subtract(50));
+		graphicsTree.widthProperty().bind(root_container.widthProperty());
+		graphicsTree.heightProperty().bind(root_container.heightProperty().subtract(50));
 	}
 	
 	/**

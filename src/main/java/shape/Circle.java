@@ -176,7 +176,7 @@ public final class Circle {
 	 * @param highlight a boolean value for switching on/off highlighted colors
 	 */
 	public void setHighlighter(boolean highlight) {
-		if (highlight == true) {
+		if (highlight) {
 			setFontColor(Color.rgb(49, 116, 222));
 			setBackgroundColor(Color.rgb(155, 244, 167));
 			setBorderColor(Color.rgb(49, 116, 222));
