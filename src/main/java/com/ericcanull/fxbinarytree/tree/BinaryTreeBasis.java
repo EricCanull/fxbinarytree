@@ -22,11 +22,10 @@ public abstract class BinaryTreeBasis {
 	
 	/**
 	 * An abstract base class for the BST.
-	 * @param rootCircle
-	 * @Overload Default constructor
+	 * @param rootCircle a shape.Circle object with a tree search key
 	 */
 	public BinaryTreeBasis(Circle rootCircle) {
-		root = new TreeNode(rootCircle, null, null);
+		root = new TreeNode(rootCircle);
 	}
 	
 	/**
@@ -47,7 +46,7 @@ public abstract class BinaryTreeBasis {
 	/**
 	 * Gets the root item.
 	 * @return A shape.Circle object representing the tree root
-	 * @throws TreeException
+	 * @throws TreeException if the tree is empty
 	 */
 	public TreeNode getRoot() throws TreeException {
 		if (root == null) {
@@ -56,11 +55,4 @@ public abstract class BinaryTreeBasis {
 		
 		return root;
 	}
-	
-	/**
-	 * Sets the root item. 
-	 * @param newCircle a shape.Circle object with a tree search key
-	 */
-	public abstract void setRootItem(Circle newCircle);
-
 }

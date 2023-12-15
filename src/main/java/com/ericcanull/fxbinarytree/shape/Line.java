@@ -5,7 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 /**
- * Creates a line object with methods for controlling it's point locale,
+ * Creates a line object with methods for controlling its point locale,
  * color, and size.
  * @author Eric Canull
  * @version 1.0
@@ -27,7 +27,7 @@ public final class Line {
 	private Color color;
 	
 	/**
-	 * Creates a line object with methods for controlling it's point locale,
+	 * Creates a line object with methods for controlling its point locale,
 	 * background color, border color, font color, and number id.
 	 */
 	public Line() {
@@ -38,6 +38,7 @@ public final class Line {
 	 * 
 	 * @param point a Cartesian coordinate using x and y float numbers.
 	 */
+	@SuppressWarnings("unused")
 	public Line(Point2D point, Point2D point2) {
 		this.point = point;
 		this.point2 = point;
@@ -60,7 +61,7 @@ public final class Line {
 	/**
 	 * Gets the point coordinates.
 	 * @return A point 
-	 */
+	 */@SuppressWarnings("unused")
 	public Point2D getPoint() {
 		return point;
 	}
@@ -78,6 +79,7 @@ public final class Line {
 	 * Gets the point coordinates.
 	 * @return A Cartesian coordinate
 	 */
+	@SuppressWarnings("unused")
 	public Point2D getPoint2() {
 		return point2;
 	}

@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 
 
 /**
- * Creates a circle object with methods for controlling it's point locale,
+ * Creates a circle object with methods for controlling its point locale,
  * background color, border color, font color, and number id.
  * @author Eric Canull
  * @version 1.0
@@ -38,7 +38,7 @@ public final class Circle {
 	private Color fontColor;
 
 	/**
-	 * Creates a circle object with methods for controlling it's point locale,
+	 * Creates a circle object with methods for controlling its point locale,
 	 * background color, border color, font color, search key.
 	 * @param searchKey a <code>Integer</code> search key for searching and deleting within an index.
 	 */
@@ -49,9 +49,10 @@ public final class Circle {
 	
 	/**
 	 * 
-	 * @param searchKey a integer id number for searching and deleting from an index.
+	 * @param searchKey an integer id number for searching and deleting from an index.
 	 * @param point a Cartesian coordinate using x and y float numbers.
 	 */
+	@SuppressWarnings("unused")
 	public Circle(Integer searchKey, Point2D point) {
 		this.searchKey = searchKey;
 		this.point = point;
@@ -95,71 +96,40 @@ public final class Circle {
 	}
 	/**
 	 * Get the search key number.
-	 * @return A integer of the circle index value. 
+	 * @return An integer of the circle index value.
 	 */
 	public Integer getSearchKey() {
 		return this.searchKey;
 	}
-	
+
 	/**
-	 * Gets the border color.
-	 * @return A color for the circle border
-	 */
-	public Color getBorderColor() {
-		return borderColor;
-	}
-	
-	/**
-	 * Sets the border color.
-	 * @param borderColor
+	 * Set the border color of the Circle.
+	 *
+	 * @param borderColor The color to set as the border color.
 	 */
 	private void setBorderColor(Color borderColor) {
 		this.borderColor = borderColor;
 	}
-	
-	/**
-	 * Gets the point coordinates.
-	 * @return 
-	 */
-	public Point2D getPoint() {
-		return point;
-	}
-	
+
 	/**
 	 * Sets the point coordinates.
-	 * @param point
+	 * @param point A Cartesian coordinate
 	 */
 	public void setPoint(Point2D point) {
 		this.point = point;
 	}
-	
-	/**
-	 * Gets the background color.
-	 * @return
-	 */
-	public Color getBackgroundColor() {
-		return backgroundColor;
-	}
-	
+
 	/**
 	 * Sets the background color.
-	 * @param color 
+	 * @param color  A color object
 	 */
 	private void setBackgroundColor(Color color) {
 		this.backgroundColor = color;
 	}
-	
-	/**
-	 * Gets the circle radius.
-	 * @return
-	 */
-	public int getRadius() {
-		return RADIUS;
-	}
-	
+
 	/**
 	 * Gets the font color.
-	 * @return
+	 * @return A color object
 	 */
 	public Color getFontColor() {
 		return this.fontColor;
@@ -167,7 +137,7 @@ public final class Circle {
 	
 	/**
 	 * Sets the font color.
-	 * @param fontColor
+	 * @param fontColor A color object
 	 */
 	private void setFontColor(Color fontColor) {
 		this.fontColor = fontColor;

@@ -24,16 +24,16 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 
 	/**
 	 * Binary search tree.
-	 * @param rootCircle
-	 * @Overload Default constructor
+	 * @param rootCircle a shape.Circle object with a tree search key
 	 */
+	@SuppressWarnings("unused")
 	public BinarySearchTree(Circle rootCircle) {
 		super(rootCircle);
 	}
 
 	/**
 	 * Inserts a new circle into the tree.
-	 * @param newCircle
+	 * @param newCircle a new circle
 	 */
 	public void insertItem(Circle newCircle) {
 		root = insertItem(root, newCircle);
@@ -43,14 +43,13 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	 * Inserts a new circle into the tree.
 	 * @param tNode a tree node
 	 * @param newCircle a new circle
-	 * @return 
-	 * @Overload insertItem() 
+	 * @return A tree.TreeNode from within the tree
 	 */
-	protected TreeNode insertItem(TreeNode tNode, Circle newCircle) {
+    private TreeNode insertItem( TreeNode tNode, Circle newCircle ) {
 		TreeNode newSubtree;
 		
 		if (tNode == null) {
-			tNode = new TreeNode(newCircle, null, null);
+			tNode = new TreeNode(newCircle);
 			return tNode;
 		}
 		
@@ -73,11 +72,11 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Retrieves a circle from the tree.
+	 *
 	 * @param searchKey a unique identifying value
-	 * @return An integer search key number
 	 */
-	public Integer retrieveItem(Integer searchKey) {
-		return retrieveItem(root, searchKey);
+	public void retrieveItem( Integer searchKey) {
+		retrieveItem(root, searchKey);
 	}
 	
 	
@@ -86,9 +85,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	 * @param tNode a tree node 
 	 * @param searchKey a unique identifying value
 	 * @return An integer search key number
-	 * @Overload retrieveItem()
 	 */
-	protected Integer retrieveItem(TreeNode tNode, Integer searchKey) {
+    private Integer retrieveItem( TreeNode tNode, Integer searchKey ) {
 		Integer treeItem;
 		if (tNode == null) {
 			treeItem = null;
@@ -97,8 +95,7 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 			tNode.highlightFlag = true;
 			Circle nodeItem = tNode.rootCircle;
 			if (Objects.equals(searchKey, nodeItem.getSearchKey())) {
-				tNode.highlightFlag = true;
-				treeItem = tNode.rootCircle.getSearchKey();
+                treeItem = tNode.rootCircle.getSearchKey();
 			} else if (searchKey < nodeItem.getSearchKey()) {
 				tNode.leftCircle.highlightFlag = true;
 				treeItem = retrieveItem(tNode.leftCircle, searchKey);
@@ -114,7 +111,7 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	/**
 	 * Deletes a circle from the tree.
 	 * @param searchKey a unique identifying value
-	 * @throws TreeException if search key cannot be located.
+	 * @throws TreeException if a search key cannot be located.
 	 */
 	public void deleteItem(Integer searchKey) throws TreeException {
 		root = deleteItem(root, searchKey);
@@ -125,9 +122,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	 * @param tNode a tree node 
 	 * @param searchKey a unique identifying value
 	 * @return A tree.TreeNode from within the tree
-	 * @Overload deleteItem()
 	 */
-	protected TreeNode deleteItem(TreeNode tNode, Integer searchKey) {
+    private TreeNode deleteItem( TreeNode tNode, Integer searchKey ) {
 		TreeNode newSubtree;
 		
 		if (tNode == null) {
@@ -156,7 +152,7 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	 * @param tNode A tree.TreeNode from within the tree
 	 * @return A tree.TreeNode from within the tree
 	 */
-	protected TreeNode deleteNode(TreeNode tNode) {
+    private TreeNode deleteNode( TreeNode tNode ) {
 
 		Circle replacementItem;
 
@@ -181,10 +177,10 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 
 	/**
 	 * Helper method for searching and deleting left-side nodes.
-	 * @param tNode
-	 * @return
+	 * @param tNode A tree.TreeNode from within the tree
+	 * @return A tree.TreeNode from within the tree
 	 */
-	protected Circle findLeftmost(TreeNode tNode) {
+    private Circle findLeftmost( TreeNode tNode ) {
 		if (tNode.leftCircle == null) {
 			return tNode.rootCircle;
 		}
@@ -193,10 +189,10 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Helper method for searching and deleting right-side nodes.
-	 * @param tNode
-	 * @return
+	 * @param tNode A tree.TreeNode from within the tree
+	 * @return A tree.TreeNode from within the tree
 	 */
-	protected TreeNode deleteLeftmost(TreeNode tNode) {
+    private TreeNode deleteLeftmost( TreeNode tNode ) {
 		if (tNode.leftCircle == null) {
 			return tNode.rightCircle;
 		}
@@ -206,7 +202,7 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Resets the color to the default.
-	 * @param tNode
+	 * @param tNode A node in the tree
 	 */
 	public void setResetColor(TreeNode tNode) {
 		 resetColor(tNode);
@@ -216,9 +212,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	/**
 	 * Resets the color to the default.
 	 * @param tNode A node in the tree
-	 * @Overload
 	 */
-	protected void resetColor(TreeNode tNode) {
+    private void resetColor( TreeNode tNode ) {
 		if (tNode != null) {
 			tNode.highlightFlag = false;
 
@@ -236,8 +231,8 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 
 	/**
 	 * Gets the height of the tree
-	 * @param root
-	 * @return
+	 * @param root A tree.TreeNode from within the tree
+	 * @return An integer representing the height of the tree
 	 */
 	public int getHeight(TreeNode root) {
 		if (root == null)
@@ -247,17 +242,14 @@ public final class BinarySearchTree extends BinaryTreeBasis {
 	
 	/**
 	 * Gets the size of the tree
-	 * @param root
-	 * @return
+	 * @param root A tree.TreeNode from within the tree
+	 * @return An integer representing the size of the tree
 	 */
+	@SuppressWarnings("unused")
 	public int getSize(TreeNode root) {
 		if (root == null)
 			return 0;
 		return (getSize(root.leftCircle) + getSize(root.rightCircle)) + 1;
 	}
-	
-	@Override
-	public void setRootItem(Circle newItem) {
-		root = new TreeNode(newItem, null, null);
-	}
+
 }

@@ -17,10 +17,8 @@ public class TreeNode {
 	/**
 	 * A binary tree using circle objects.
 	 * @param rootCircle a root tree circle
-	 * @param leftCircle a left tree circle
-	 * @param rightCircle a right tree circle
 	 */
-	public TreeNode(Circle rootCircle, TreeNode leftCircle, TreeNode rightCircle) {
+	public TreeNode( Circle rootCircle ) {
 		this.rootCircle = rootCircle;
 		this.leftCircle = null;
 		this.rightCircle = null;

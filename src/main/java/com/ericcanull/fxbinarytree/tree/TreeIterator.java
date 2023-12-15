@@ -11,9 +11,9 @@ import java.util.NoSuchElementException;
  */
 public final class TreeIterator implements Iterator<Integer> {
 	
-	private BinaryTreeBasis binaryTree;
+	private final BinaryTreeBasis binaryTree;
 	private TreeNode currentNode;
-	private LinkedList<TreeNode> queue;
+	private final LinkedList<TreeNode> queue;
 	
 	/**
 	 * Iterates through the tree using the java.util.Iterator<E> interface.
@@ -27,7 +27,7 @@ public final class TreeIterator implements Iterator<Integer> {
 	
 	/**
 	 * Determines if there are elements in the queue. 
-	 * @Return true if the iteration has more elements
+	 * @return true if the iteration has more elements
 	 */
 	public boolean hasNext() {
 		return !queue.isEmpty();

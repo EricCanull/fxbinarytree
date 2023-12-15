@@ -1,13 +1,12 @@
 package com.ericcanull.fxbinarytree.tree;
 
 /**
- * Defines an exception that is thrown when a queue exception occurs.
+ * Defines an exception (thrown when a queue exception occurs).
  */
-@SuppressWarnings("serial")
 public final class QueueException extends RuntimeException {
 
 	/**
-	 * Constructs an object with specific message
+	 * Constructs an object with a specific message
 	 * @param message A string literal specifying the details of this exception
 	 */
 	public QueueException(String message) {

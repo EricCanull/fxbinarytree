@@ -178,9 +178,12 @@
       </PATH>
     </treeState>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectFrameBounds">
     <option name="x" value="82" />
     <option name="width" value="1838" />
@@ -342,9 +345,20 @@
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/aslam/Documents/GitHub/fxbinarytree-fork",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -584,12 +598,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="fxbinarytree" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -624,7 +632,6 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="" name="Default" comment="" />
       <created>1499366758985</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -640,7 +647,17 @@
       <workItem from="1500012397864" duration="603000" />
       <workItem from="1500360399244" duration="8000" />
       <workItem from="1702651575682" duration="50000" />
+      <workItem from="1702651639246" duration="1940000" />
     </task>
+    <task id="LOCAL-00001" summary="Update project settings and configs&#10;&#10;This commit includes a significant update and cleanup of project settings stored in .idea and workspace.xml files. Additionally, Maven wrapper scripts were added to support the build process. A related project configuration file (.iml) was removed.">
+      <option name="closed" value="true" />
+      <created>1702653207767</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702653207767</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -684,6 +701,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update project settings and configs&#10;&#10;This commit includes a significant update and cleanup of project settings stored in .idea and workspace.xml files. Additionally, Maven wrapper scripts were added to support the build process. A related project configuration file (.iml) was removed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update project settings and configs&#10;&#10;This commit includes a significant update and cleanup of project settings stored in .idea and workspace.xml files. Additionally, Maven wrapper scripts were added to support the build process. A related project configuration file (.iml) was removed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

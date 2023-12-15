@@ -1,6 +1,5 @@
 package com.ericcanull.fxbinarytree.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -47,7 +46,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 *  Performs the action when the search button is clicked.
 	 */
-	@FXML private void searchOnAction(ActionEvent event) {
+	@FXML private void searchOnAction( ) {
 		try {
 			graphicsTree.search(Integer.parseInt(input_field.getText().trim()));
 		} catch (NumberFormatException nfe) {
@@ -64,7 +63,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 * Performs the action when the delete button is clicked.
 	 */
-	@FXML private void deleteOnAction(ActionEvent event) {
+	@FXML private void deleteOnAction( ) {
 		try {
 			graphicsTree.delete(Integer.parseInt(input_field.getText().trim()));
 		} catch (NumberFormatException nfe) {
@@ -83,7 +82,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 * Performs the action when the clear button is clicked.
 	 */
-	@FXML private void clearOnAction(ActionEvent event) {
+	@FXML private void clearOnAction( ) {
 		Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to empty the tree?", ButtonType.OK);
 		alert.showAndWait()
 				.filter(response -> response == ButtonType.OK)
@@ -94,7 +93,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 *  Performs the action when the insert button is clicked.
 	 */
-	@FXML private void insertOnAction(ActionEvent event) {
+	@FXML private void insertOnAction( ) {
 		try {
 			graphicsTree.insert(Integer.parseInt(input_field.getText().trim()));
 		} catch (NumberFormatException nfe) {
@@ -109,7 +108,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 * Performs the action when the first traversal button is clicked.
 	 */
-	@FXML private void inorderOnAction(ActionEvent event) {
+	@FXML private void inorderOnAction( ) {
 		graphicsTree.setInorder();
 		traversal_textarea.setText(graphicsTree.printTree());
 	}
@@ -117,7 +116,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 *  Performs the action when the second traversal button is clicked.
 	 */
-	@FXML private void preorderOnAction(ActionEvent event) {
+	@FXML private void preorderOnAction( ) {
 		graphicsTree.setPreorder();
 		traversal_textarea.setText(graphicsTree.printTree());
 	}
@@ -125,7 +124,7 @@ public final class GraphicsController implements Initializable {
 	/**
 	 *  Performs the action when the third traversal button is clicked.
 	 */
-	@FXML private void postorderOnAction(ActionEvent event) {
+	@FXML private void postorderOnAction( ) {
 		graphicsTree.setPostorder();
 		traversal_textarea.setText(graphicsTree.printTree());
 	}

@@ -11,12 +11,11 @@ import com.ericcanull.fxbinarytree.tree.*;
 import java.util.Objects;
 
 /**
- * Draws the tree and updates the graphics to display according to the
+ * Draws the tree and updates the graphics to display, according to the
  * searching, inserting, deleting, and traversal options.
  * @author Eric Canull
  * @version 1.0
  */
-@SuppressWarnings("serial")
 public final class GraphicsTree extends Canvas {
 
 	/**
@@ -30,7 +29,7 @@ public final class GraphicsTree extends Canvas {
 	private int maxTreeHeight; 			// Max tree height;
 
 	/**
-	 * Draws the tree and updates the graphics to display according to the
+	 * Draws the tree and updates the graphics to display, according to the
 	 * searching, inserting, deleting, and traversal options.
 	 */
 	public GraphicsTree() {
@@ -40,15 +39,10 @@ public final class GraphicsTree extends Canvas {
 
 		createTree();
 	}
-	
-	/**
-     * Changes the tree rendered by this panel.
-     */
-    public void setTree(BinarySearchTree root) {  tree = root; }
 
 	/**
 	 * Creates the initial binary search tree with the default values
-	 * in the numbers array.
+	 * in the number's array.
 	 */
 	public void createTree() {
 
@@ -65,17 +59,18 @@ public final class GraphicsTree extends Canvas {
 
 	/**
 	 * Set the max tree height.
+	 *
 	 * @param size a <code>Integer</code> number for the tree max size
-	 * @return An <code>Integer</code> max tree size
 	 */
-	private int setMaxTreeHeight(int size) {
+	private void setMaxTreeHeight( int size) {
 		this.maxTreeHeight = size;
-		return size;
 	}
 
 	/**
-	 * Searches for an search key number in the tree. If the number is found the tree will
-	 * be repainted to show the path. If the number cannot be found a notification
+	 * Searches for a search key number in the tree.
+	 * If the number is found, the tree will
+	 * be repainted to show the path.
+	 * If the number cannot be found, a notification
 	 * message will be displayed.
 	 * 
 	 * @param searchKey a <code>Integer</code> number for finding a tree.TreeNode
@@ -137,17 +132,18 @@ public final class GraphicsTree extends Canvas {
 
 	/**
 	 * Inserts a circle into the tree. If the tree height reaches the max height
-	 * displays an notification request to change the max height.
+	 * displays a notification request to change the max height.
 	 * @param searchKey a <code>integer</code> number to insert in the tree
 	 */
-	public void insert(Integer searchKey) {
+	@SuppressWarnings ("ConstantValue")
+	public void insert( Integer searchKey) {
 		insertCircle = new Circle(searchKey);
 		tree.insertItem(insertCircle);
 		int heightOption = 2;
 		drawTree();
 
 
-	//	 If the height of the tree equals max height
+		// If the height of the tree equals max height
 		if (tree.getHeight(tree.getRoot()) == maxTreeHeight) {
 			// Display option message
 
@@ -157,57 +153,51 @@ public final class GraphicsTree extends Canvas {
 					.filter(response -> response == ButtonType.YES)
 					.ifPresent(response -> alert.close());
 		}
-//			heightOption = JOptionPane.showConfirmDialog(null,
-//					"Reached max height. Would you like to increase the height?", " Height Adjust",
-//					JOptionPane.YES_NO_OPTION);
 
-			// Option 'Yes'selected: Change the height
-			if (heightOption == 0) {
+		// Option 'Yes' selected: Change the height
+		if (heightOption == 0) {
 //				String height = JOptionPane.showInputDialog("Enter a new height between 7 and 10.");
-				heightOption = 7;
-				try {
-					int newHeight = heightOption;
-//					int newHeight = Integer.parseInt(heightOption);
-					// Confirm height input is within acceptable range
-					if (newHeight > tree.getHeight(tree.getRoot()) && newHeight <= 10) {
-						setMaxTreeHeight(newHeight);
-					} else {
-						throw new TreeException("tree.TreeException on change height.");
-					}
-
-					// Error occurred: Reverse changes and exit
-				} catch (NumberFormatException | TreeException e) {
-					Alert alert = new Alert(Alert.AlertType.WARNING, "Input error. The height was not changed.",
-							ButtonType.OK);
-					alert.showAndWait()
-							.filter(response -> response == ButtonType.OK)
-							.ifPresent(response -> alert.close());
-
-					tree.deleteItem(insertCircle.getSearchKey()); // Remove the inserted circle
-					tree.setResetColor(tree.root); 				  // Reset highlight flag for all nodes
+			heightOption = 7;
+			try {
+				// Confirm height input is within acceptable range
+				if ( heightOption > tree.getHeight(tree.getRoot()) && heightOption <= 10) {
+					setMaxTreeHeight(heightOption);
+				} else {
+					throw new TreeException("tree.TreeException on change height.");
 				}
 
-				// Option 'No' selected: Reverse changes and exit
-			} else if (heightOption == 1) {
-				Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "The number was not inserted.",
+				// Error occurred: Reverse changes and exit
+			} catch (NumberFormatException | TreeException e) {
+				Alert alert = new Alert(Alert.AlertType.WARNING, "Input error. The height was not changed.",
 						ButtonType.OK);
 				alert.showAndWait()
 						.filter(response -> response == ButtonType.OK)
 						.ifPresent(response -> alert.close());
 
-
 				tree.deleteItem(insertCircle.getSearchKey()); // Remove the inserted circle
-				tree.setResetColor(tree.root);                // Reset highlight flag for all nodes
+				tree.setResetColor(tree.root); 				  // Reset highlight flag for all nodes
+			}
+
+			// Option 'No' selected: Reverse changes and exit
+		} else if (heightOption == 1) {
+			Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "The number was not inserted.",
+					ButtonType.OK);
+			alert.showAndWait()
+					.filter(response -> response == ButtonType.OK)
+					.ifPresent(response -> alert.close());
 
 
+			tree.deleteItem(insertCircle.getSearchKey()); // Remove the inserted circle
+			tree.setResetColor(tree.root);                // Reset highlight flag for all nodes
 
-		} else {
+
 
 		}
 	}
 
 	/**
-	 * Deletes a number from the tree. If the number is not able to be deleted display
+	 * Deletes a number from the tree.
+	 * If the number is not able to be deleted, display
 	 * a notification message.
 	 * @param searchKey <code>integer</code> number to delete from the tree
 	 */
@@ -233,14 +223,14 @@ public final class GraphicsTree extends Canvas {
 	/**
 	 * Draws the binary tree on the component.
 	 */
-	protected void drawTree() {
+    private void drawTree( ) {
 		double width = getWidth();
 		double height = getHeight();
 
 		GraphicsContext gc = getGraphicsContext2D();
 		gc.clearRect(0, 0, width, height);
 
-		// If the tree is not empty; draw the lines and circles
+		// If the tree is not empty, draw the lines and circles
 		if (tree.root != null) {
 		int treeHeight = tree.getHeight(tree.root);
 			
@@ -259,13 +249,13 @@ public final class GraphicsTree extends Canvas {
 	 * @param yMin the maximum width to draw on the component
 	 * @param yMax the maximum height to draw on the component
 	 */
-	protected void drawTree(GraphicsContext gc, TreeNode treeNode, double xMin, double xMax, double yMin, double yMax) {
+    private void drawTree( GraphicsContext gc, TreeNode treeNode, double xMin, double xMax, double yMin, double yMax ) {
 
 		Point2D linePoint1; 	// Point_1
 		Point2D linePoint2;   // Point_2
 		Line newLine = new Line();  // Blank line
 		
-		// If left node is not null then draw a line to it
+		// If the left node is not null, then draw a line to it
 		if (treeNode.leftCircle != null) {
 			newLine.setHighlighter(false);
 			
@@ -283,7 +273,7 @@ public final class GraphicsTree extends Canvas {
 			drawTree(gc, treeNode.leftCircle, xMin, (xMin + xMax) / 2, yMin + yMax, yMax);
 		}
 
-		// If right node is not null then draw a line to it
+		// If the right node is not null, then draw a line to it
 		if (treeNode.rightCircle != null) {
 			newLine.setHighlighter(false);
 			
@@ -304,7 +294,7 @@ public final class GraphicsTree extends Canvas {
 	}
 
 	/**
-	 * Draws circles for every root, parent and child tree nodes.
+	 * Draws circles for every root, parent and child tree node.
 	 * @param gc graphics2D class for expanding the drawing tools
 	 * @param treeNode a tree with <code>Integer</code> index numbers
 	 * @param xMin the minimum width to draw on the component
@@ -312,7 +302,8 @@ public final class GraphicsTree extends Canvas {
 	 * @param yMin the minimum height to draw on the component
 	 * @param yMax the maximum height to draw on the component
 	 */
-	public void drawCircles(GraphicsContext gc, TreeNode treeNode, double xMin, double xMax, double yMin, double yMax) {
+	@SuppressWarnings ("ClassEscapesDefinedScope")
+	public void drawCircles( GraphicsContext gc, TreeNode treeNode, double xMin, double xMax, double yMin, double yMax) {
 
 		// Create a new point
 		Point2D point = new Point2D((xMin + xMax) / 2, yMin + yMax / 2);
@@ -344,6 +335,7 @@ public final class GraphicsTree extends Canvas {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	public void clearCanvas() {
 		getGraphicsContext2D().clearRect(0, 0, this.getWidth(), this.getHeight());
 	}
